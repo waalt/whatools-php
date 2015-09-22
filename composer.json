@@ -2,5 +2,8 @@
     "name": "waaltcom/whatools-php",
     "description": "PHP lib for integrating Whatools into your app easily.",
     "require": {
+      "php": ">=5.3",
+      "ext-curl": "*",
+      "ext-gd": "*"
     }
 }
