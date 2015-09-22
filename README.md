@@ -38,3 +38,34 @@ $w->statusPost("To be, or not to be, that is the question.");
 ```php
 $status = $w->statusGet();
 ```
+## Setting your avatar
+```php
+$w->avatarPost("Route for an image file");
+```
+## Getting and storing someone's avatar
+```php
+$avatar = $w->avatarGet("Phone number in international format");
+file_put_contents("avatar.jpg", $avatar);
+```
+## Sending a message
+```php
+$w->messagePost("Phone number in international format", "Body of the message");
+```
+## Sending a picture
+```php
+$w->picturePost("Phone number in international format", "Route for an image file", "Optional caption");
+```
+## Retrieving and printing messages received and sent since last logout
+```php
+$messages = $w->messageGet();
+foreach ($messages as $message)
+{
+  if ($msg->mine)
+    echo "> ", $msg->to;
+  else
+    echo "< ", $msg->from;
+  echo "\n\t\"", $msg->body, "\"";
+  echo "\n\t@", $msg->stamp;
+  echo "\n\tACK: ", $msg->ack, "\n";
+}
+```
