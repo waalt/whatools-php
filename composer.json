@@ -1,0 +1,6 @@
+{
+    "name": "waaltcom/whatools-php",
+    "description": "PHP lib for integrating Whatools into your app easily.",
+    "require": {
+    }
+}
